@@ -68,7 +68,8 @@
   #ifdef IS_RAMPS_13
     #define SERVO0_PIN      7
   #else
-    #define SERVO0_PIN     11
+    // #define SERVO0_PIN     11
+    #define SERVO0_PIN     19
   #endif
 #endif
 #ifndef SERVO1_PIN
@@ -105,7 +106,8 @@
     #define Z_MIN_PIN      18
   #endif
   #ifndef Z_MAX_PIN
-    #define Z_MAX_PIN      19
+    // #define Z_MAX_PIN      19
+    #define Z_MAX_PIN      11
   #endif
 #endif
 
