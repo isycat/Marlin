@@ -63,6 +63,8 @@
   #define TEMP_BED_PIN                  P0_23_A0  // A0 (T0) - (67) - TEMP_BED_PIN
 #endif
 
+#define HOTENDS 1
+
 #if HOTENDS == 1 && TEMP_SENSOR_PROBE
   #define TEMP_PROBE_PIN              TEMP_1_PIN
 #endif
@@ -74,16 +76,19 @@
   #define HEATER_0_PIN                     P2_07
 #endif
 #if HOTENDS == 1
+  #ifndef FAN_PIN
+    #define FAN_PIN                          P2_04
+  #endif
   #ifndef FAN1_PIN
-    #define FAN1_PIN                       P2_04
+    #define FAN1_PIN                       P2_03
   #endif
 #else
   #ifndef HEATER_1_PIN
     #define HEATER_1_PIN                   P2_04
   #endif
-#endif
-#ifndef FAN_PIN
-  #define FAN_PIN                          P2_03
+  #ifndef FAN_PIN
+    #define FAN_PIN                          P2_03
+  #endif
 #endif
 #ifndef HEATER_BED_PIN
   #define HEATER_BED_PIN                   P2_05
